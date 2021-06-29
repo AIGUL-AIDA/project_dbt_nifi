@@ -1,0 +1,29 @@
+version: 2
+
+seeds:
+  - name: starbucks_satisfactory
+    description: Table for answers in the survey
+    docs:
+      show: true
+    columns:
+      - name: timestamp1        
+        tests:          
+          - not_null
+      - name: spend_per_visit
+        tests:          
+          - not_null
+      - name: nearest_place
+        tests:          
+          - not_null
+      - name: gender
+        tests:          
+          - not_null
+      - name: currently
+        tests:          
+          - not_null 
+      - name: visit
+        tests:          
+          - not_null   
+      - name: age
+        tests:          
+          - not_null         

@@ -1,0 +1,23 @@
+SELECT 
+  timestamp1,
+  gender,
+  age,
+  currently,
+  annual,
+  visit,
+  enjoy,
+  time_spend_visit,
+  nearest_place,
+  membership_card,
+  frequently_purchase,
+  spend_per_visit,
+  rate_quality,
+  rate_price,
+  purchase_decision,
+  rate_ambiance,
+  rate_wifi_quality, 
+  rate_service, 
+  business_meetings, 
+  promotions, 
+  continue_buying
+FROM {{ ref('starbucks_satisfactory') }}

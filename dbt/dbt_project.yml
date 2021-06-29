@@ -1,0 +1,34 @@
+name: project_dbt_airflow
+version: 0.0.1
+config-version: 2
+
+profile: project_dbt_airflow
+
+source-paths: ["models"]
+data-paths: ["data", "seeds"]
+test-paths: ["tests"]
+docs-paths: ["docs"]
+target-path: "target"
+log-path: "dbt_logs"
+
+clean-targets: ["compiled", "dbt_logs", "dbt_modules"]
+
+require-dbt-version: ">=0.18.0"
+
+models:
+  test_model:
+    materialized: table
+  staging:
+    materialized: view
+    tags: ["staging"]
+  marts:
+    materialized: table
+    tags: ["marts"]
+
+seeds:
+  test_model:
+    +database: airflow
+    +enabled: true
+
+
+   
